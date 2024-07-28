@@ -19,7 +19,7 @@ def loader_demo():
 
     plt.show()
 
-def make_annotations():
+def make_glasses_annotations():
     input_path = "./datasets/glasses/"
     output_path = "./datasets/glasses_annotation/"
     files = os.listdir(input_path)
@@ -32,7 +32,6 @@ def make_annotations():
         df.iloc[:, 1:] = np.zeros((N, 21 * 32))
         for col in cols: df.iloc[:, col + 1] = l
         df.to_csv(output_path + fn, index=False)
-
 
 
 
