@@ -30,7 +30,7 @@ def unet_demo():
     plt.show()
 
 def encoder_demo():
-    encoder = load_encoder("./trained_models/unet_positions.pt")
+    encoder = load_encoder("./trained_models/encoder1.pt")
     print(sum(p.numel() for p in encoder.parameters() if p.requires_grad))
 
     test_dataset = Positions("test")
@@ -45,7 +45,7 @@ def encoder_demo():
     truth = torch.argmax(truth, 1)
     pred = torch.argmax(pred, 1)
 
-    for i in range(3):
+    for i in range(2):
         precision, recall, accuracy, f_score = calc_scores(i, truth, pred)
         print(precision, recall, accuracy, f_score)
 
