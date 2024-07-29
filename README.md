@@ -5,7 +5,7 @@
 - Clone this repository and navigate to toor directory
 - Setup virtual environment `$ python3 -m venv venv`
 - Activate virtual environmnet `$ source venv/bin/activate`
-- Install requirements (may take a while) `$ pip3 install torch pandas matplotlib`
+- Install requirements (may take a while) `$ pip3 install -r "requirements.txt"`
 
 ## Useful commands
 
